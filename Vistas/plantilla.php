@@ -22,6 +22,11 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="http://localhost/clinica/Vistas/dist/css/skins/_all-skins.min.css">
 
+  <!-- DATATABLES -->
+  <link rel="stylesheet" href="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -109,6 +114,16 @@
 <script src="http://localhost/clinica/Vistas/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="http://localhost/clinica/Vistas/dist/js/demo.js"></script>
+
+
+<!-- DATATABLES -->
+<script src="http://localhost/clinica/Vistas/bower_components/datatables.net/js/jquery.dataTables.js"></script>
+<script src="http://localhost/clinica/Vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+<script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+<script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
+
 
 <script src="http://localhost/clinica/Vistas/js/profesionales.js"></script>
 <script>
