@@ -43,7 +43,7 @@ class EspecialidadesM extends ConexionBD{
 
             $pdo -> execute();
 
-            return $pdo->fetchAll();
+            return $pdo->fetch();
         }
     }
 

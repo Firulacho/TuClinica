@@ -60,7 +60,8 @@
               $url[0] == "perfil-Recepcionista" ||
               $url[0] == "perfil-R" ||
               $url[0] == "especialidades" ||
-              $url[0] == "editar-Especialidad"
+              $url[0] == "editar-Especialidad" ||
+              $url[0] == "profesionales"
               ) {
 
             include "modulos/".$url[0].".php";
@@ -108,6 +109,8 @@
 <script src="http://localhost/clinica/Vistas/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="http://localhost/clinica/Vistas/dist/js/demo.js"></script>
+
+<script src="http://localhost/clinica/Vistas/js/profesionales.js"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
