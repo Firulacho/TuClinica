@@ -42,8 +42,12 @@
       
       echo'<div class="wrapper">';
         include "modulos/cabecera.php";
+
+        if ($_SESSION["rol"] == "Recepcionista") {
+          include "modulos/menuRecepcionista.php";
+        }
         
-        include "modulos/menu.php";
+        
 
       $url=array();
 
@@ -54,7 +58,10 @@
           if ($url[0] == "inicio" ||
               $url[0] == "salir" ||
               $url[0] == "perfil-Recepcionista" ||
-              $url[0] == "perfil-R") {
+              $url[0] == "perfil-R" ||
+              $url[0] == "especialidades" ||
+              $url[0] == "editar-Especialidad"
+              ) {
 
             include "modulos/".$url[0].".php";
             
