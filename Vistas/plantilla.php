@@ -66,7 +66,8 @@
               $url[0] == "perfil-R" ||
               $url[0] == "especialidades" ||
               $url[0] == "editar-Especialidad" ||
-              $url[0] == "profesionales"
+              $url[0] == "profesionales" ||
+              $url[0] == "pacientes"
               ) {
 
             include "modulos/".$url[0].".php";
@@ -126,6 +127,7 @@
 
 
 <script src="http://localhost/clinica/Vistas/js/profesionales.js"></script>
+<script src="http://localhost/clinica/Vistas/js/pacientes.js"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
