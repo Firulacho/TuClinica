@@ -1,6 +1,6 @@
 <?php
 
-    if ($_SESSION["rol"] != "Recepcionista") {
+    if ($_SESSION["rol"] != "Paciente") {
 
         echo'<script>
             window.location = "inicio";
@@ -24,10 +24,9 @@
 
                 $editarPerfil = new PacientesC();
                 $editarPerfil -> EditarPerfilPacienteC();
-                //$editarPerfil -> ActualizarPerfilRecepcionistaC();
+                $editarPerfil -> ActualizarPerfilPacienteC();
             ?>
 
-                
             </div>
         </div>
     </section>

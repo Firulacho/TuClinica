@@ -46,11 +46,17 @@
     if (isset($_SESSION["Ingresar"]) && $_SESSION["Ingresar"] == true) {
       
       echo'<div class="wrapper">';
-        include "modulos/cabecera.php";
+        
+      include "modulos/cabecera.php";
 
-        if ($_SESSION["rol"] == "Recepcionista") {
-          include "modulos/menuRecepcionista.php";
-        }
+      if ($_SESSION["rol"] == "Recepcionista") {
+          
+        include "modulos/menuRecepcionista.php";
+
+      }else if ($_SESSION["rol"] =="Paciente") {
+          
+        include "modulos/menuPaciente.php";
+      }
         
         
 
@@ -67,7 +73,9 @@
               $url[0] == "especialidades" ||
               $url[0] == "editar-Especialidad" ||
               $url[0] == "profesionales" ||
-              $url[0] == "pacientes"
+              $url[0] == "pacientes" ||
+              $url[0] == "perfil-Paciente" ||
+              $url[0] == "perfil-Pa"
               ) {
 
             include "modulos/".$url[0].".php";
@@ -90,6 +98,10 @@
           }else if ($_GET["url"] == "ingreso-Recepcionista") {
 
             include "modulos/ingreso-Recepcionista.php";
+            # code...
+          }else if ($_GET["url"] == "ingreso-Paciente") {
+
+            include "modulos/ingreso-Paciente.php";
             # code...
           }
         }else{
