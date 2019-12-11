@@ -34,7 +34,7 @@
             <div class="icon">
               <i class="fa fa-user-md"></i>
             </div>
-            <a href="#" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="ingreso-Profesional" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 

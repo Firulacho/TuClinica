@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION["rol"] != "Recepcionista"){
+if($_SESSION["rol"] != "Recepcionista" && $_SESSION["rol"] != "Profesional"){
 
     echo'<script>
         window.location = "inicio";

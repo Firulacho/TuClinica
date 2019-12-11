@@ -61,6 +61,10 @@
       }else if ($_SESSION["rol"] =="Paciente") {
           
         include "modulos/menuPaciente.php";
+
+      }else if ($_SESSION["rol"] =="Profesional") {
+          
+        include "modulos/menuProfesional.php";
       }
         
         
@@ -83,7 +87,10 @@
               $url[0] == "perfil-Pa" ||
               $url[0] == "Ver-especialidades" ||
               $url[0] == "Profesional" ||
-              $url[0] == "historial" 
+              $url[0] == "historial" ||
+              $url[0] == "perfil-Profesional"  ||
+              $url[0] == "perfil-P" ||
+              $url[0] == "Citas"
               ) {
 
             include "modulos/".$url[0].".php";
@@ -110,6 +117,10 @@
           }else if ($_GET["url"] == "ingreso-Paciente") {
 
             include "modulos/ingreso-Paciente.php";
+            # code...
+          }else if ($_GET["url"] == "ingreso-Profesional") {
+
+            include "modulos/ingreso-Profesional.php";
             # code...
           }
         }else{
@@ -186,11 +197,46 @@
                     end: "'.$value["fin"].'"
 
                   },';
+                }else if ($value["id_profesional"] == substr($_GET["url"], 6)) {
+                  echo '{
+
+                    id: '.$value["id"].',
+                    title: "'.$value["nyaPA"].'",
+                    start: "'.$value["inicio"].'",
+                    end: "'.$value["fin"].'"
+
+                  },';
                 }
-              # code...
+              
             }
           ?>
     ],
+
+    <?php
+
+      if ($_SESSION["rol"] == "Paciente") {
+
+        $columna = "id";
+        $valor = substr($_GET["url"],12);
+
+        $resultado = ProfesionalesC::ProfesionalC($columna, $valor);
+
+        echo'scrollTime: "'.$resultado["horarioEntrada"].'",
+             minTime: "'.$resultado["horarioEntrada"].'",
+             maxTime: "'.$resultado["horarioSalida"].'",';
+
+      }else if ($_SESSION["rol"] == "Profesional") {
+
+        $columna = "id";
+        $valor = substr($_GET["url"],6);
+
+        $resultado = ProfesionalesC::ProfesionalC($columna, $valor);
+
+        echo'scrollTime: "'.$resultado["horarioEntrada"].'",
+             minTime: "'.$resultado["horarioEntrada"].'",
+             maxTime: "'.$resultado["horarioSalida"].'",';
+      }
+    ?>
 
     dayClick:function(date,jsEvent, view){
 

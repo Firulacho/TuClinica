@@ -40,4 +40,35 @@ class CitasC{
 
         return $resultado;
     }
+
+    //Pedir Cita como Profesional
+    public function PedirCitaProfesionalC(){
+
+        if (isset($_POST["Pid"])) {
+
+            $tablaBD = "tbl_citas";
+
+            $Pid = substr($_GET["url"], 6);
+
+            $datosC = array("Pid"           =>$_POST["Pid"]
+                            ,"Cid"          =>$_POST["Cid"]
+                            ,"nombrePA"     =>$_POST["nombrePA"]
+                            ,"rutPA"        =>$_POST["rutPA"]
+                            ,"fyhIC"        =>$_POST["fyhIC"]
+                            ,"fyhFC"        =>$_POST["fyhFC"]);
+            
+            $resultado = CitasM::PedirCitaProfesionalM($tablaBD, $datosC);
+
+            if ($resultado == true) {
+
+                echo '
+                    <script>
+                        windows.location = "Citas/"'.$Pid.';
+                    </script>        
+                ';
+                # code...
+            }
+            # code...
+        }
+    }
 }
