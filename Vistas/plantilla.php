@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="http://localhost/clinica/Vistas/dist/css/skins/_all-skins.min.css">
 
   <!-- DATATABLES -->
-  <link rel="stylesheet" href="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
+  
   <link rel="stylesheet" href="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
 
@@ -164,10 +164,11 @@
 <!-- DATATABLES -->
 <script src="http://localhost/clinica/Vistas/bower_components/datatables.net/js/jquery.dataTables.js"></script>
 <script src="http://localhost/clinica/Vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+
+
 <script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
-<script src="http://localhost/clinica/Vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
+
 
 <!-- fullCalendar -->
 <script src="http://localhost/clinica/Vistas/bower_components/moment/moment.js"></script>
@@ -177,6 +178,7 @@
 
 <script src="http://localhost/clinica/Vistas/js/profesionales.js"></script>
 <script src="http://localhost/clinica/Vistas/js/pacientes.js"></script>
+<script src="http://localhost/clinica/Vistas/js/recepcionistas.js"></script>
 
 <script>
   $(document).ready(function () {

@@ -31,7 +31,7 @@ if($_SESSION["rol"] != "Administrador"){
 
             <div class="box-body">
             
-                <table class="table table-bordered table-hover table-striped DT">
+                <table class="table table-bordered table-hover table-striped dt-responsive DT">
                 
                     <thead>
                     
@@ -79,8 +79,8 @@ if($_SESSION["rol"] != "Administrador"){
                                     
                                         <div class="btn-group">
                                     
-                                            <button class="btn btn-danger EliminarProfesional" Pid="'.$value["id"].'"
-                                            imgP="'.$value["foto"].'"><i class="fa fa-times"></i>Borrar</button>
+                                            <button class="btn btn-danger EliminarRecepcionista" Rid="'.$value["id"].'"
+                                            imgR="'.$value["foto"].'"><i class="fa fa-times"></i>Borrar</button>
                                             
                                         </div>
                                     </td>
@@ -116,7 +116,7 @@ if($_SESSION["rol"] != "Administrador"){
 
                                     <input type="text" class="form-control input-lg" name="apellido" required>
 
-                                    <input type="hidden" name="rolP" value="Profesional">
+                                    <input type="hidden" name="rolR" value="Recepcionista">
 
                                 </div>
 
@@ -155,8 +155,8 @@ if($_SESSION["rol"] != "Administrador"){
                     </div>
 
                     <?php
-                        $crear = new ProfesionalesC();
-                        $crear -> CrearProfesionalC();
+                        $crear = new RecepcionistasC();
+                        $crear -> CrearRecepcionistaC();
                     ?>
                     
                     </form>    
@@ -167,6 +167,6 @@ if($_SESSION["rol"] != "Administrador"){
 
 <?php
 
-$borrarP = new ProfesionalesC();
-$borrarP -> BorrarProfesionalC();
+$borrarP = new RecepcionistasC();
+$borrarP -> BorrarRecepcionistaC();
 ?>

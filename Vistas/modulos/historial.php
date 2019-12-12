@@ -25,7 +25,7 @@ if($_SESSION["id"] != substr($_GET["url"], 10)){
         
             <div class="box-body">
             
-                <table class="table table-bordered table-hover table-striped DT">
+                <table class="table table-bordered table-hover table-striped dt-responsive DT">
                 
                     <thead>
                     

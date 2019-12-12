@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION["rol"] != "Recepcionista"){
+if($_SESSION["rol"] != "Recepcionista" && $_SESSION["rol"] != "Administrador"){
 
     echo'<script>
         window.location = "inicio";
@@ -44,7 +44,7 @@ if($_SESSION["rol"] != "Recepcionista"){
 
             <div class="box-body">
             
-                <table class="table table-bordered table-hover table-striped">
+                <table class="table table-bordered table-hover table-striped dt-responsive DT">
                 
                     <thead>
                     

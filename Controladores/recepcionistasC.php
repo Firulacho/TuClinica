@@ -206,4 +206,63 @@ class RecepcionistasC{
         return $resultado;
 
     }
+
+    //Crear Recepcionistas
+    public function CrearRecepcionistaC(){
+
+        if (isset($_POST["rolR"])) {
+
+            $tablaBD = "tbl_recepcionista";
+
+            $datosC = array("nombre"        =>$_POST["nombre"]
+                            , "apellido"    =>$_POST["apellido"]
+                            , "usuario"     =>$_POST["usuario"]
+                            , "clave"       =>$_POST["clave"]
+                            , "rol"         =>$_POST["rolR"]);
+
+            $resultado = RecepcionistasM::CrearRecepcionistaM($tablaBD,$datosC);
+
+            if ($resultado == true){
+
+            echo '<script>
+                window.location = "recepcionistas";
+                </script>';
+                # code...
+            }
+            # code...
+        }
+    }
+
+    //BOrrar Recepcionistas
+    public function BorrarRecepcionistaC(){
+
+        if (isset($_GET["Rid"])) {
+
+            $tablaBD="tbl_recepcionista";
+
+            $id = $_GET["Rid"];
+
+            if ($_GET["imgR"] != "") {
+
+                unlink($_GET["imgR"]);
+                # code...
+            }
+
+            $resultado = RecepcionistasM::BorrarRecepcionistaM($tablaBD,$id);
+            
+            if ($resultado == true){
+
+                echo '<script>
+                    window.location = "recepcionistas";
+                    </script>';
+                    # code...
+                }
+            # code...
+        }
+
+
+    }
+
+
+
 }
