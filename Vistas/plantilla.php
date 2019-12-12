@@ -65,7 +65,12 @@
       }else if ($_SESSION["rol"] =="Profesional") {
           
         include "modulos/menuProfesional.php";
+
+      }else if ($_SESSION["rol"] =="Administrador") {
+          
+        include "modulos/menuAdministrador.php";
       }
+        
         
         
 
@@ -90,7 +95,10 @@
               $url[0] == "historial" ||
               $url[0] == "perfil-Profesional"  ||
               $url[0] == "perfil-P" ||
-              $url[0] == "Citas"
+              $url[0] == "Citas" ||
+              $url[0] == "perfil-Administrador" ||
+              $url[0] == "perfil-A" ||
+              $url[0] == "recepcionistas"
               ) {
 
             include "modulos/".$url[0].".php";
@@ -122,7 +130,12 @@
 
             include "modulos/ingreso-Profesional.php";
             # code...
+          }else if ($_GET["url"] == "ingreso-Administrador") {
+
+            include "modulos/ingreso-Administrador.php";
+            # code...
           }
+
         }else{
 
           include "modulos/seleccionar.php";

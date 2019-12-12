@@ -286,10 +286,8 @@ class PacientesC{
                 echo'<script>
                     window.location = "http://localhost/clinica/perfil-Pa/'.$_SESSION["id"].'";
                 </script>';
-                # code...
+                
             }    
-            
         }
     }
-    
 }

@@ -196,4 +196,14 @@ class RecepcionistasC{
             # code...
         }
     }
+
+    //Mostrar Secretarias
+    public function VerRecepcionistasC(){
+
+        $tablaBD = "tbl_recepcionista";
+
+        $resultado = RecepcionistasM::VerRecepcionistasM($tablaBD);
+        return $resultado;
+
+    }
 }

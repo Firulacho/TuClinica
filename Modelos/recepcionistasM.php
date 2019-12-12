@@ -64,4 +64,16 @@ class RecepcionistasM extends ConexionBD{
         $pdo->close();
         $pdo=null;
     }
+
+    //MOstrar Recepcionista
+    static public function VerRecepcionistasM($tablaBD){
+
+        $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY apellido ASC");
+
+        $pdo -> execute();
+        return $pdo->fetchAll();
+
+        $pdo->close();
+        $pdo=null;
+    }
 }
